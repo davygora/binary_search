@@ -37,4 +37,23 @@ class BTree
       end
     end
   end
+
+  def sort
+    @left.sort if @left
+    puts @value
+    @right.sort if @right
+  end
+
+  def sort_asc
+    @left.sort_asc if @left
+    puts @value
+    @right.sort_asc if @right
+  end
+
+  def sort_desc
+    @right.sort_desc if @right
+    puts @value
+    @left.sort_desc if @left
+  end
+
 end
