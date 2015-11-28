@@ -1,4 +1,5 @@
 class BTree
+
   def initialize(value)
     @value = value
     @left  = nil
@@ -38,22 +39,20 @@ class BTree
     end
   end
 
-  def sort
-    @left.sort if @left
-    puts @value
-    @right.sort if @right
-  end
-
   def sort_asc
-    @left.sort_asc if @left
+    @sorted_array = []
+    @sorted_array.concat(@left.sort_asc) if @left
     puts @value
-    @right.sort_asc if @right
+    @sorted_array.concat(@right.sort_asc) if @right
+    @sorted_array
   end
 
   def sort_desc
-    @right.sort_desc if @right
+    @sorted_array = []
+    @sorted_array.concat(@right.sort_desc) if @right
     puts @value
-    @left.sort_desc if @left
+    @sorted_array.concat(@left.sort_desc) if @left
+    @sorted_array
   end
 
 end
