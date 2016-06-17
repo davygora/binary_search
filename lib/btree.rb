@@ -54,5 +54,4 @@ class BTree
     @sorted_array.concat(@left.sort_desc) if @left
     @sorted_array
   end
-
 end

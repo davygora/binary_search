@@ -1,21 +1,16 @@
-
 require_relative 'lib/btree'
 
 sequence = Array.new
 
-20.times do
-  sequence << rand(20)
-end
+20.times { sequence << rand(20) }
 
 sequence.uniq!
 
 btree = BTree.new(sequence.shift)
 
-sequence.each do |e|
-  btree.add(e)
-end
+sequence.each { |e| btree.add(e)}
 
-#result = btree.find(0)
-#puts (result ? 'yes' : 'no')
+result = btree.find(10)
+puts (result ? 'yes' : 'no')
 puts btree.sort_asc
 puts btree.sort_desc
