@@ -8,34 +8,18 @@ class BTree
 
   def add(value)
     if value < @value
-      if @left.nil?
-        @left = BTree.new(value)
-      else
-        @left.add(value)
-      end
-     else
-       if @right.nil?
-         @right = BTree.new(value)
-       else
-         @right.add(value)
-       end
+      @left.nil? ? @left = BTree.new(value) : @left.add(value)
+    else
+      @right.nil? ? @right = BTree.new(value) : @right.add(value)
     end
   end
 
   def find(value)
     return true if value == @value
     if value < @value
-      if @left.nil?
-        false
-      else
-        @left.find(value)
-      end
+      @left.nil? ? false : @left.find(value)
     else
-      if @right.nil?
-        false
-      else
-        @right.find(value)
-      end
+      @right.nil? ? false : @right.find(value)
     end
   end
 
