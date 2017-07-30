@@ -1,5 +1,4 @@
 class BTree
-
   def initialize(value)
     @value = value
     @left  = nil
