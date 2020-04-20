@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.0)
-    byebug (10.0.2)
+    byebug (11.1.2)
     jaro_winkler (1.5.2)
     parallel (1.13.0)
     parser (2.6.0.0)
